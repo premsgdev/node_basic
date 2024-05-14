@@ -1,0 +1,19 @@
+<div>
+    <h1>{{title}}</h1>
+    {{#each news.articles }}
+    <div>
+        <h3>{{title}}</h3>
+        <strong>{{ author }} </strong></br>
+        <strong>{{ publishedAt }} </strong></br>
+        <div>
+            <img 
+            src={{urlToImage }}
+            alt="img"
+            width="250"
+            height="250"
+        />
+        </div>
+        <p>{{ content }}</p>
+    </div>
+    {{/each}}
+</div>
