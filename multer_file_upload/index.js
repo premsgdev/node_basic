@@ -4,6 +4,7 @@ const multer = require('multer')
 const app = express()
 const router = express.Router()
 
+app.use(express.static('public'))
 
 const storage = multer.diskStorage({
     filename : (req, file, cb)=>{
@@ -28,7 +29,9 @@ const upload = multer({
     },
     fileFilter: fileFilter
 })
-
+app.get('/',(req, res)=>{
+    res.sendFile(__dirname +'/views/public.html')
+})
 require('./routes/files.routs')(app,router,upload)
 
 app.listen(8000)
