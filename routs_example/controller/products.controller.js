@@ -21,6 +21,15 @@ exports.getProduct = async (req, res) => {
     }
 };
 
+exports.getCategories = async (req, res) => {
+    let categories = await fetchData(`https://fakestoreapi.com/products/categories`)
+    if(categories){
+         res.status(200).send(categories)
+    } else {
+        res.status(500).send('Something went wrong')
+    }
+};
+
 
 const fetchData =  async (url) => {
     var data = null;
