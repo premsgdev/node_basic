@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "root",
+    "password": "admin@123",
+    "database": "sequel_test",
+    "host": "mysql-test-training.orb.local",
+    "dialect": "mysql"
+  }
+}
