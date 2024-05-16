@@ -36,10 +36,6 @@ Object.keys(db).forEach(modelName => {
     db[modelName].associate(db);
   }
 });
-const connObj = {
-  sequelize: Sequelize,
-  conn: sequelize
-}
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
